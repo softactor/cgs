@@ -11,6 +11,10 @@ class ProblemController extends Controller
     /*
      * Service entry form view page
      */
+    public function problem_list(){
+        $problem_type_list   =   ProblemModel::all();
+        return view("backend\problem_type_list", compact("problem_type_list"));
+    }
     public function problem_entry_form(){
         return view("backend\problem_entry_form");
     }

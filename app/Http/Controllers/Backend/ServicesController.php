@@ -11,6 +11,12 @@ class ServicesController extends Controller
     /*
      * Service entry form view page
      */
+    
+    public function service_list() {
+        $all_services   =   ServiceModel::all();
+        return view("backend\service_list", compact("all_services"));
+    }
+    
     public function service_entry_form(){
         return view("backend\service_entry_form");
     }

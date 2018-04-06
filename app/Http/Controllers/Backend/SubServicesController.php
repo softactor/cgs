@@ -12,6 +12,10 @@ class SubServicesController extends Controller
     /*
      * Service entry form view page
      */
+    public function sub_service_list() {
+        $all_sub_services   =   SubServiceModel::all();
+        return view("backend\sub_service_list", compact("all_sub_services"));
+    }
     public function sub_service_entry_form(){
         $all_services   =   ServiceModel::all();
         return view("backend\sub_service_entry_form", compact('all_services'));
