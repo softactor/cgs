@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 30, 2018 at 08:30 AM
+-- Generation Time: Apr 06, 2018 at 08:48 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -75,6 +75,17 @@ CREATE TABLE `problem_solutions` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `problem_solutions`
+--
+
+INSERT INTO `problem_solutions` (`id`, `problem_type_id`, `solution_id`, `created_at`, `updated_at`) VALUES
+(1, 1, 1, '2018-04-05 23:54:42', '2018-04-05 23:54:42'),
+(2, 1, 3, '2018-04-05 23:54:42', '2018-04-05 23:54:42'),
+(3, 2, 1, '2018-04-05 23:55:01', '2018-04-05 23:55:01'),
+(4, 2, 2, '2018-04-05 23:55:01', '2018-04-05 23:55:01'),
+(5, 2, 3, '2018-04-05 23:55:01', '2018-04-05 23:55:01');
+
 -- --------------------------------------------------------
 
 --
@@ -93,7 +104,9 @@ CREATE TABLE `proble_types` (
 --
 
 INSERT INTO `proble_types` (`id`, `name`, `created_at`, `updated_at`) VALUES
-(1, 'Problem Type 1', '2018-03-30 00:24:18', '2018-03-30 00:24:18');
+(1, 'Problem Type 1', '2018-03-30 00:24:18', '2018-03-30 00:24:18'),
+(2, 'Problem Type 2', '2018-04-05 23:31:55', '2018-04-05 23:31:55'),
+(3, 'Problem Type 3', '2018-04-05 23:32:01', '2018-04-05 23:32:01');
 
 -- --------------------------------------------------------
 
@@ -164,7 +177,11 @@ CREATE TABLE `solutions` (
 --
 
 INSERT INTO `solutions` (`id`, `name`, `created_at`, `updated_at`) VALUES
-(1, 'Solution 1', '2018-03-30 00:29:33', '2018-03-30 00:29:33');
+(1, 'Solution 1', '2018-03-30 00:29:33', '2018-03-30 00:29:33'),
+(2, 'Solution 2', '2018-04-05 23:31:10', '2018-04-05 23:31:10'),
+(3, 'Solution 3', '2018-04-05 23:31:17', '2018-04-05 23:31:17'),
+(4, 'Solution 4', '2018-04-05 23:31:25', '2018-04-05 23:31:25'),
+(5, 'Solution 5', '2018-04-05 23:31:32', '2018-04-05 23:31:32');
 
 -- --------------------------------------------------------
 
@@ -346,12 +363,12 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `problem_solutions`
 --
 ALTER TABLE `problem_solutions`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `proble_types`
 --
 ALTER TABLE `proble_types`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `services`
 --
@@ -371,7 +388,7 @@ ALTER TABLE `service_requests`
 -- AUTO_INCREMENT for table `solutions`
 --
 ALTER TABLE `solutions`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `subjects`
 --
